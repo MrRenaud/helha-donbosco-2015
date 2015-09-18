@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="DummyApp.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DummyApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DummyApp.ViewModels"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <vm:MainViewModel />
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView ItemsSource="{Binding Todos}">
+            <ListView.ItemTemplate >
+                <DataTemplate xmlns:model="using:DummyApp.Data.Model" x:DataType="model:Todo">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Margin="8,0">
+                            <Run Text="#"/>
+                            <Run Text="{x:Bind id}" FontWeight="ExtraBold"/>
+                        </TextBlock>
+                        <CheckBox IsChecked="{Binding completed}" Content="{x:Bind title}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Page>
