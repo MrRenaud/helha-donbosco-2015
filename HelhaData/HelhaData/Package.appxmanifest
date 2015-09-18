@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="e51a37a0-5266-47fc-a242-322816aa5bf5"
+    Name="d5094bf5-a58d-4f8c-b84d-ed53b2dda2b4"
     Publisher="CN=renau"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="e51a37a0-5266-47fc-a242-322816aa5bf5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="d5094bf5-a58d-4f8c-b84d-ed53b2dda2b4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>DummyApp</DisplayName>
+    <DisplayName>HelhaData</DisplayName>
     <PublisherDisplayName>renau</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="DummyApp.App">
+      EntryPoint="HelhaData.App">
       <uap:VisualElements
-        DisplayName="DummyApp"
+        DisplayName="HelhaData"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="DummyApp"
+        Description="HelhaData"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

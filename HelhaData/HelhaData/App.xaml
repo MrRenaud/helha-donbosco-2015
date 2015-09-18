@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="DummyApp.App"
+    x:Class="HelhaData.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:DummyApp"
+    xmlns:local="using:HelhaData"
     RequestedTheme="Light">
 
 </Application>

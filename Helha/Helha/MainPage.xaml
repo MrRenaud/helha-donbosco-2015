@@ -5,9 +5,31 @@
     xmlns:local="using:Helha"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Helha.ViewModels"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- Ligne 1 -->
+        <Button Grid.Row="0" Content="Click me" Click="ButtonBase_OnClick" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" 
+                   Text="{Binding HelloMessage}" VerticalAlignment="Top"/>
 
+        <!-- Ligne 2 -->
+
+        <ListView Grid.Row="1" Background="Aquamarine"
+                  ItemsSource="{Binding TodoItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding IsDone}" Content="{Binding Title}"></CheckBox>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
