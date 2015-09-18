@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,8 +13,8 @@ namespace HelhaData.ViewModels
     {
         #region properties 
 
-        private List<TodoItem> _todoItems;
-        public List<TodoItem> TodoItems
+        private ObservableCollection<TodoItem> _todoItems;
+        public ObservableCollection<TodoItem> TodoItems
         {
             get { return _todoItems; }
             set
@@ -29,7 +30,7 @@ namespace HelhaData.ViewModels
 
         public MainViewModel()
         {
-            //TodoItems = new List<TodoItem>();
+            TodoItems = new ObservableCollection<TodoItem>();
         }
 
         #endregion

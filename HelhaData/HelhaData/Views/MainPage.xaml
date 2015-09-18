@@ -19,5 +19,21 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Slider x:Name="Slider" Grid.Row="0"  />
+
+        <Rectangle Fill="Red" Width="100" Height="100"  Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <ScaleTransform ScaleX="{Binding Value, ElementName=Slider}"
+                                ScaleY="{Binding Value, ElementName=Slider}"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>-->
+
+
     </Grid>
 </Page>

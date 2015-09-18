@@ -35,7 +35,9 @@ namespace HelhaData
             var todoItems = await apiClient.GetTodos();
 
             var viewModel = (MainViewModel)DataContext;
-            viewModel.TodoItems = todoItems;
+            //viewModel.TodoItems = todoItems;
+
+            todoItems.ForEach(item => viewModel.TodoItems.Add(item));
         }
     }
 }
